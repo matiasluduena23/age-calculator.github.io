@@ -1,4 +1,14 @@
 ---
+import '../style/global.css';
+
+import Input from '../components/input.astro';
+import Result from '../components/Result.astro';
+import Button from '../components/Button.astro';
+
+const day = "day";
+const month = "month";
+const year = "year";
+
 ---
 
 <html lang="en">
@@ -10,6 +20,83 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+
+		<main class="container">
+			<form action="#">
+				<div class="grid">
+					<Input label={day} class={day} placeholder="DD" />
+					<Input label={month} class={month} placeholder="MM" />
+					<Input label={year} class={year} placeholder="YYYY" />
+				</div>
+				<div class="btn-container">
+					<span class="line"></span>
+					 	<Button />
+					<span class="line"></span>
+				</div>
+				
+			</form>
+			<Result />
+		</main>
+
+		<style>
+
+			main {
+				padding: 1rem;
+				background: #fff;
+				border-radius: 1.5rem 1.5rem 7rem 1.5rem;
+			}
+
+			.grid {
+				display: flex;
+			}
+
+			form {
+				margin-block: 2rem;
+			}
+
+			.btn-container {
+				display: flex;
+				align-items:center;
+				justify-content:center;
+				margin-top: 2rem;
+			}
+
+			img {
+				width: 70%;
+			}
+
+			.line {
+				display: inline-block;
+				width: 100%;
+				height: 1px;
+				background: var(--Light-grey);
+			}
+
+			@media(min-width: 800px){
+
+				main {
+					padding: 3rem;
+				}
+			
+				.grid {
+					gap: 1rem;
+				}
+
+				.btn-container span:last-child {
+					display:none;
+				}	
+
+				section {
+					font-size: 5rem;
+				}
+		}
+
+
+		</style>
+		 
+		 <script>
+			import '../scripts/main.js';
+			
+		 </script>
 	</body>
 </html>

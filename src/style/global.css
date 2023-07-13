@@ -1,0 +1,71 @@
+@font-face {
+  font-family: Poppins;
+  src: url('../assets/fonts/Poppins-Bold.ttf');
+  src: url('../assets/fonts/Poppins-BoldItalic.ttf');
+  src: url('../assets/fonts/Poppins-ExtraBold.ttf');
+  src: url('../assets/fonts/Poppins-ExtraBoldItalic.ttf');
+  src: url('../assets/fonts/Poppins-Italic.ttf');
+  src: url('../assets/fonts/Poppins-Regular.ttf');
+}
+
+
+:root {
+
+  /* Primary */
+  --Purple-clr: hsl(259, 100%, 65%);
+  --Red-clr: hsl(0, 100%, 67%);
+
+  /* Neutral */
+
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+}
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  align-content: center;
+  min-height: 100vh;
+  font-size: 32px;
+  font-family: Poppins, sans-serif;
+  color: var(--Off-black);
+  background: var(--Off-white);
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin-inline: auto;
+}
+
+/* Error message */
+.grid.error .wrap  span {
+  position: absolute;
+  bottom: -8px;
+  left: 15px;
+  font-size: 13px;
+  color: var(--Red-clr);
+  display: block;
+}
+
+.grid.error .wrap input {
+  border: 1px solid var(--Red-clr);
+}
+
+.grid.error .wrap p{
+  color: var(--Red-clr);
+}
+
+@media(min-width: 800px){
+  .grid.error .wrap span {
+    bottom: 5px;
+  }
+
+}
