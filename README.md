@@ -14,7 +14,7 @@
 
 ### Screenshot
 
-![](../age-calculator/public/design/screenshot.jpg)
+![](dist/design/screenshot.jpg)
 
 
 ### Links
